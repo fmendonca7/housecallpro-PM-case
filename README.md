@@ -1,4 +1,3 @@
-# housecallpro-PM-case
 # 🏠 Competitor Signal Intelligence — HCP Case Study
 
 ## AI-Powered Lead Enrichment for Housecall Pro Sales
