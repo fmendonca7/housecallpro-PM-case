@@ -4,59 +4,26 @@
 
 ---
 
-## Part I — Cirurgical Analysis: O Que EXATAMENTE Foi Pedido
-
-### Entrega Final = 4 itens, enviados via link ou zip, 24h antes da sessão
-
----
-
-### 📦 DELIVERABLE 1: Working Prototype
-
-**O que eles disseram:**
-> "A working prototype — functional, demoable, and built using AI coding tools. Not a wireframe or a deck. Something that runs."
-> "The prototype can be lightweight and partially mocked (e.g., stubbed outputs) as long as the core interaction, failure handling, and eval plan are clearly demoable."
-
-**O que PRECISA conter (mínimo):**
-- [ ] Algo que **roda** — não é Figma, não é slide, não é wireframe
-- [ ] Construído com **AI coding tools** (isso é avaliado)
-- [ ] **Core interaction** demoável — o fluxo principal funciona
-- [ ] **Failure handling** demoável — o que acontece quando o sistema erra/não sabe
-- [ ] **Eval plan** demoável — como se testa a qualidade
-
-**O que o case EXPLICITAMENTE quer que o protótipo endereça:**
-1. ✅ Detecção de competitor tools que um prospect usa
-2. ✅ Signal enrichment para prospects de home service
-3. ✅ Sales reps podem **tailor outreach** com base nos dados
-4. ✅ Sales reps podem **priorizar high-fit leads**
-5. ✅ Resultado: **acelerar pipeline conversion**
-
-**O que a live iteration session exige do protótipo:**
-> "The panel will give you feedback as if we are customers. Your job is to act on that feedback live — using AI tools, in the session, in front of us."
-
-- [ ] Código **flexível** o suficiente para ser modificado ao vivo em 30min
-- [ ] Stack que você domina e consegue iterar rapidamente
-- [ ] Estrutura modular (componentes isolados, fácil de trocar/adicionar)
-
 > [!IMPORTANT]
-> **NOSSA ESTRATÉGIA: Não fazer "apenas" um protótipo.**
-> Vamos construir um **MVP funcional real** — com pipeline AI que de fato roda, dados reais de businesses, e uma interface que parece produto, não hack. A diferença entre "protótipo que roda" e "MVP que impressiona" é o que vai te destacar.
+> **OUR STRATEGY: Don't build "just" a prototype.**
+> We're building a **real, functional MVP** — with an AI pipeline that actually runs, real business data, and an interface that looks like a product, not a hack. The gap between "prototype that runs" and "MVP that impresses" is what differentiates.
 
 **Staff-level overdelivery:**
 
-| Aspecto | "Meets Expectations" | "Staff PM — Contratação Óbvia" |
+| Aspect | "Meets Expectations" | "Staff PM — Obvious Hire" |
 |---|---|---|
-| Interface | Streamlit/basic UI | Dashboard polido com design system profissional |
-| Dados | Mocked JSON | Mix de dados reais (scraped) + mocked, claramente documentado |
-| AI Pipeline | Um prompt para LLM | Pipeline multi-stage com confidence scoring real |
-| Failure handling | Mensagem de erro | Framework de confidence tiers com evidence trail + feedback loop |
-| Iterabilidade | Difícil de mudar | Componentes modulares, config-driven, fácil de pivotar ao vivo |
-| Deployment | Roda local | Deployed com link público (Vercel/Railway) |
+| Interface | Streamlit / basic UI | Polished dashboard with a professional design system |
+| Data | Mocked JSON | Mix of real (scraped) + mocked data, clearly labeled |
+| AI pipeline | Single LLM prompt | Multi-stage pipeline with real confidence scoring |
+| Failure handling | Error message | Confidence-tier framework with evidence trail + feedback loop |
+| Iterability | Hard to change | Modular components, config-driven, easy to pivot live |
+| Deployment | Runs locally | Deployed with public link (Vercel / Railway) |
 
 ---
 
-### 📦 DELIVERABLE 2: Process Folder (Artefatos de Processo)
+### 📦 DELIVERABLE 1: Process Folder (Process Artifacts)
 
-**O que eles disseram:**
+**What they said:**
 > "The files that show how you got there. This should include, at minimum:"
 > - **a problem framing doc**
 > - **any research or competitive reference you pulled**
@@ -64,375 +31,356 @@
 > - **evidence of how you iterated with an LLM to refine your approach before building**
 > "Organized files in a folder or repo."
 
-**Sub-artefatos obrigatórios:**
+**Required sub-artifacts:**
 
 #### 📄 2A. Problem Framing Doc
 
-**O que o case pede que esteja aqui (seção "Your prototype and process artifacts should address"):**
-
 > 1. **Problem framing** — What specific pain point are you targeting and why? What does "good" look like and what does failure look like?
 
-Precisa responder:
-- [ ] Qual **pain point específico** estamos atacando? (não genérico)
-- [ ] **Por que** esse pain point e não outro?
-- [ ] O que **"good" looks like**? (definição clara de sucesso)
-- [ ] O que **"failure" looks like**? (definição clara de fracasso)
-- [ ] Contexto do problema no workflow atual dos sales reps
-- [ ] Impacto quantificável (mesmo que estimado)
+Must answer:
+- [ ] Which **specific pain point** are we attacking? (not generic)
+- [ ] **Why** this pain point and not another?
+- [ ] What does **"good" look like**? (clear definition of success)
+- [ ] What does **"failure" look like**? (clear definition of failure)
+- [ ] Context of the problem in the current sales rep workflow
+- [ ] Quantifiable impact (even if estimated)
 
 > 2. **Solution design** — What approach are you taking and why? What does the AI do autonomously versus hand back to a human? Describe one viable non-AI alternative you considered and explain why AI is the better choice here.
 
-Precisa responder:
-- [ ] Qual abordagem e **por que essa**?
-- [ ] O que o **AI faz sozinho** vs. o que **devolve para o humano**?
-- [ ] **Uma alternativa não-AI viável** que você considerou
-- [ ] **Por que AI é a melhor escolha** (argumento fundamentado)
+Must answer:
+- [ ] Which approach and **why this one**?
+- [ ] What does **AI do on its own** vs. what does it **hand back to a human**?
+- [ ] **One viable non-AI alternative** you considered
+- [ ] **Why AI is the better choice** (well-grounded argument)
 
 > 3. **Trust and failure** — How does the customer interact with this when the system is wrong or uncertain? How does trust build over time?
 
-Precisa responder:
-- [ ] Como o usuário **interage com o sistema quando ele erra**?
-- [ ] Como o usuário **interage quando o sistema está incerto**?
-- [ ] Como a **confiança se constrói ao longo do tempo**?
+Must answer:
+- [ ] How does the user **interact with the system when it's wrong**?
+- [ ] How does the user **interact when the system is uncertain**?
+- [ ] How does **trust build over time**?
 
 > 4. **Measurement** — How would you know if this is working? What outcome metrics matter, and if AI is involved, what quality bar would you set before shipping?
 
-Precisa responder:
-- [ ] Como saber se está **funcionando**?
-- [ ] Quais **outcome metrics** importam?
-- [ ] Qual **quality bar para AI** antes de fazer ship?
+Must answer:
+- [ ] How to know if it's **working**?
+- [ ] Which **outcome metrics** matter?
+- [ ] What **quality bar for AI** before shipping?
 
 #### 📄 2B. Research / Competitive References
 
-Precisa conter:
-- [ ] Pesquisa sobre os competidores mencionados (ServiceTitan, Jobber, Workiz, FieldEdge)
-- [ ] Como eles se diferenciam, pricing, segmentos, sinais detectáveis
-- [ ] Benchmarks de mercado (se existem ferramentas similares)
-- [ ] Referências de como empresas SaaS B2B fazem competitive intelligence
+Must contain:
+- [ ] Research on the competitors named in the case (ServiceTitan, Jobber, Workiz, FieldEdge)
+- [ ] How they differentiate, pricing, segments, detectable signals
+- [ ] Market benchmarks (if similar tools exist)
+- [ ] References on how B2B SaaS companies do competitive intelligence
 
 #### 📄 2C. Requirements / PRD Document
 
-Precisa conter:
+Must contain:
 - [ ] User stories / Jobs to be Done
-- [ ] Requisitos funcionais do MVP
-- [ ] Requisitos não-funcionais (performance, accuracy thresholds)
-- [ ] Scope: o que está IN vs OUT
-- [ ] Priorização e justificativa
+- [ ] MVP functional requirements
+- [ ] Non-functional requirements (performance, accuracy thresholds)
+- [ ] Scope: what's IN vs. OUT
+- [ ] Prioritization and rationale
 
 #### 📄 2D. Evidence of LLM Iteration
 
 > "evidence of how you iterated with an LLM to refine your approach before building"
 
-Precisa conter:
-- [ ] Prompts usados durante a fase de **planejamento** (não só coding)
-- [ ] Como o output do LLM influenciou decisões
-- [ ] Onde você discordou do LLM e por quê
-- [ ] Evolução do pensamento ao longo das iterações
-
-> [!WARNING]
-> **Este item é um trap test.** Eles querem ver que você PENSA antes de construir, e que usa AI como parceiro de pensamento — não como máquina de código. A evidência de iteração com LLM na fase de PLANEJAMENTO é diferente da evidência de uso de AI para CODAR.
+Must contain:
+- [ ] Prompts used during the **planning** phase (not just coding)
+- [ ] How LLM output influenced decisions
+- [ ] Where you disagreed with the LLM and why
+- [ ] Evolution of thinking across iterations
 
 ---
 
-### 📦 DELIVERABLE 3: Eval Spec (1 página max)
+### 📦 DELIVERABLE 2: Eval Spec (1 page max)
 
-**O que eles disseram:**
-> "Before you built, you defined what 'good' looks like."
-> Include:
-> - **Success criteria**
-> - **An error taxonomy** (what types of failures matter and why)
-> - **A mini test set of 10–20 examples**
-> "If AI is used, focus on AI output quality"
-> "This doesn't need to be exhaustive — it needs to be specific enough that a team member could run it next week."
-
-Precisa conter:
-- [ ] **Success criteria** — métricas quantitativas claras
-- [ ] **Error taxonomy** — tipos de falha categorizados por severidade + justificativa
-- [ ] **Mini test set** de 10-20 exemplos com:
+Must contain:
+- [ ] **Success criteria** — clear quantitative metrics
+- [ ] **Error taxonomy** — failure types categorized by severity + rationale
+- [ ] **Mini test set** of 10–20 examples with:
   - Input (business info)
-  - Expected output (qual tool, que confiança)
-  - Ground truth (como você sabe que é verdade)
-- [ ] **Foco em AI output quality** — precision, recall, confidence calibration
-- [ ] **Reproduzível** — alguém da equipe consegue rodar na semana seguinte
+  - Expected output (which tool, what confidence)
+  - Ground truth (how you know it's true)
+- [ ] **Focus on AI output quality** — precision, recall, confidence calibration
+- [ ] **Reproducible** — a teammate can run it next week
 
 > [!IMPORTANT]
-> **Constraint: 1 página max.** Isso é intencional — testa sua capacidade de ser conciso e priorizar. Não é lugar para dissertação. É lugar para clareza cirúrgica.
+> **Constraint: 1 page max.** 
+
 
 **Staff-level overdelivery:**
 
-| Aspecto | "Meets Expectations" | "Staff PM — Contratação Óbvia" |
+| Aspect | "Meets Expectations" | "Staff PM — Obvious Hire" |
 |---|---|---|
-| Test set | 10 exemplos hipotéticos | 20 exemplos com **businesses reais**, ground truth verificável |
-| Error taxonomy | Lista de erros possíveis | Tabela com severity, acceptable rate, mitigation strategy |
-| Success criteria | "Accuracy > 80%" | Métricas por tier de confiança, por competidor, com thresholds operacionais |
-| Reproduzibilidade | "Rode o script" | Script automatizado que roda o eval end-to-end e gera report |
+| Test set | 10 hypothetical examples | 20 examples with **real businesses**, verifiable ground truth |
+| Error taxonomy | List of possible errors | Table with severity, acceptable rate, mitigation strategy |
+| Success criteria | "Accuracy > 80%" | Metrics per confidence tier, per competitor, with operational thresholds |
+| Reproducibility | "Run the script" | Automated script that runs the eval end-to-end and generates a report |
 
 ---
 
-### 📦 DELIVERABLE 4: AI Usage Log
+### 📦 DELIVERABLE 3: AI Usage Log
 
-**O que eles disseram:**
-> "This is an evaluated part of your submission, not a formality."
-> Include:
-> - **Which tools you used and for what**
-> - **Your top 2–3 prompts or workflows that shaped the outcome**
-> - **At least one place where AI output was wrong, misleading, or off — and what you did about it**
-> - **At least one thing you deliberately chose to do without AI, and why**
-> "We're looking for judgment and real practice — not a tool list."
-
-Precisa conter:
-- [ ] **Tools usadas** + para que (não lista — contexto)
-- [ ] **Top 2-3 prompts/workflows** que moldaram o resultado
-- [ ] **≥1 erro do AI** + o que você fez a respeito
-- [ ] **≥1 decisão sem AI** + por que deliberadamente
-- [ ] Tom: **julgamento e prática real**, não virtue signaling
+Must contain:
+- [ ] **Tools used** + what for (not a list — context)
+- [ ] **Top 2–3 prompts/workflows** that shaped the outcome
+- [ ] **≥1 AI failure** + what you did about it
+- [ ] **≥1 decision made without AI** + why deliberately
+- [ ] Tone: **judgment and real practice**, not virtue signaling
 
 > [!TIP]
-> Este log vai ser construído **organicamente** durante nosso trabalho. Mas já sabemos que precisamos capturar: momentos de iteração, momentos de divergência, e momentos de decisão humana pura. Vou te ajudar a documentar isso ao longo do caminho.
+> This log will be built **organically** during the work. But we already know we need to capture: moments of iteration, moments of divergence, and moments of purely human decision. I'll help you document this along the way.
 
 ---
 
-## Part II — Checklist Consolidado de Entregas
+## Part II — Consolidated Delivery Checklist
 
 ```
 📁 hcp-case-study/
 ├── 📁 process/
-│   ├── 01_problem_framing.md          ← Pain point, definição de bom/ruim
-│   ├── 02_research_competitive.md     ← Pesquisa de mercado + competidores
-│   ├── 03_solution_design.md          ← Abordagem, AI vs humano, alternativa não-AI
-│   ├── 04_trust_and_failure.md        ← Tratamento de erro, incerteza, trust building
-│   ├── 05_measurement.md             ← Métricas, quality bar
-│   ├── 06_prd.md                      ← Requirements, scope, priorização
-│   └── 07_llm_iteration_evidence.md   ← Prompts, evolução do pensamento
-├── 📄 eval_spec.md                    ← 1 página: criteria, error taxonomy, test set
-├── 📄 ai_usage_log.md                 ← Disclosure avaliada
-├── 📁 prototype/                      ← O MVP funcional
-│   ├── ...código...
-│   └── README.md                      ← Como rodar
-└── 📄 README.md                       ← Índice + contexto geral
+│   ├── 01_problem_framing.md          ← Pain point, definition of good/bad
+│   ├── 02_research_competitive.md     ← Market research + competitors
+│   ├── 03_solution_design.md          ← Approach, AI vs. human, non-AI alternative
+│   ├── 04_trust_and_failure.md        ← Error handling, uncertainty, trust building
+│   ├── 05_measurement.md              ← Metrics, quality bar
+│   ├── 06_prd.md                      ← Requirements, scope, prioritization
+│   └── 07_llm_iteration_evidence.md   ← Prompts, evolution of thinking
+├── 📄 eval_spec.md                    ← 1 page: criteria, error taxonomy, test set
+├── 📄 ai_usage_log.md                 ← Evaluated disclosure
+├── 📁 prototype/                      ← The functional MVP
+│   ├── ...code...
+│   └── README.md                      ← How to run
+└── 📄 README.md                       ← Index + general context
 ```
 
 ---
 
-## Part III — Workflow de Prompts: A Sequência Exata
+## Part III — Prompt Workflow: The Exact Sequence
 
 > [!IMPORTANT]
-> Cada prompt abaixo é uma **fase de trabalho**. Você me envia o prompt, nós trabalhamos juntos, documentamos o output, e passamos para o próximo. **Essa sequência É a evidence of LLM iteration.**
+> Each prompt below is a **phase of work**. You send me the prompt, we work together, we document the output, and we move to the next. **This sequence IS the evidence of LLM iteration.**
 
-### Fase 0: Research Foundation
-**Objetivo:** Construir base de conhecimento que informa tudo depois.
+### Phase 0: Research Foundation
+**Objective:** Build the knowledge base that informs everything that follows.
 
 ```
 PROMPT 0.1 — Competitive Intelligence Deep Dive
-"Pesquise profundamente os 4 competidores mencionados no case (ServiceTitan, 
-Jobber, Workiz, FieldEdge). Para cada um, documento: segmento-alvo, pricing, 
-features principais, sinais detectáveis online (widgets, integrations, job 
-postings, review patterns). Inclua também outros competidores relevantes que 
-o case não mencionou mas que são significativos no mercado."
+"Research the 4 competitors named in the case in depth (ServiceTitan,
+Jobber, Workiz, FieldEdge). For each: target segment, pricing, core
+features, online detectable signals (widgets, integrations, job
+postings, review patterns). Include other relevant competitors the
+case didn't name but are significant in the market."
 
-PROMPT 0.2 — Sales Workflow Research  
-"Analise como funciona o workflow típico de um SDR/BDR fazendo outbound 
-para SMBs de home service. Quais são as etapas de research, quanto tempo 
-gastam, que ferramentas usam, quais são as maiores frustrações. Use 
-referências de blogs de sales ops, podcasts, e conteúdo de vendedores 
-de FSM software."
+PROMPT 0.2 — Sales Workflow Research
+"Analyze the typical workflow of an SDR/BDR doing outbound to home
+service SMBs. Research stages, time spent, tools used, biggest
+frustrations. Pull from sales ops blogs, podcasts, and content
+from FSM software sellers."
 
 PROMPT 0.3 — Competitive Intelligence Tools Benchmark
-"Pesquise as soluções existentes de competitive intelligence e technographics 
-(BuiltWith, Wappalyzer, ZoomInfo, Clearbit, etc.). Como elas detectam tech 
-stack? Quais são as limitações para SMBs de home service especificamente? 
-Existe alguma solução já focada nesse nicho?"
+"Research existing competitive intelligence and technographics tools
+(BuiltWith, Wappalyzer, ZoomInfo, Clearbit, etc.). How do they detect
+tech stacks? What are the limitations for home service SMBs
+specifically? Is there any solution already focused on this niche?"
 ```
 
 ---
 
-### Fase 1: Problem Framing
-**Objetivo:** Produzir o Problem Framing Doc + início do Solution Design.
+### Phase 1: Problem Framing
+**Objective:** Produce the Problem Framing Doc + start of Solution Design.
 
 ```
 PROMPT 1.1 — Problem Framing
-"Com base na pesquisa que fizemos, me ajude a escrever o Problem Framing 
-Doc. Quero que ele responda: (1) Qual é o pain point específico que estamos 
-atacando e por que ele é o de maior alavancagem? (2) Quem é o usuário 
-principal e qual é o JTBD? (3) O que 'good' looks like — com cenários 
-concretos? (4) O que 'failure' looks like — com cenários concretos e 
-consequências reais? Não quero genérico — quero specificity."
+"Based on the research we've done, help me write the Problem Framing
+Doc. I want it to answer: (1) What's the specific pain point we're
+attacking and why is it the highest-leverage one? (2) Who's the main
+user and what's the JTBD? (3) What does 'good' look like — with
+concrete scenarios? (4) What does 'failure' look like — with concrete
+scenarios and real consequences? No generic — I want specificity."
 
-PROMPT 1.2 — Solution Architecture  
-"Agora vamos desenhar a solução. Preciso responder: (1) Qual é a abordagem 
-e por quê? (2) O que o AI faz sozinho vs. devolve para humano — com a 
-linha clara de onde corta? (3) Uma alternativa não-AI viável + por que AI 
-é melhor. Quero que a solução seja real — com pipeline stages, data sources, 
-confidence model, e output format."
+PROMPT 1.2 — Solution Architecture
+"Now let's design the solution. I need to answer: (1) What's the
+approach and why? (2) What does AI do on its own vs. hand back to
+a human — with the clear line where it cuts? (3) A viable non-AI
+alternative + why AI is better. I want the solution to be real —
+with pipeline stages, data sources, confidence model, and output
+format."
 ```
 
 ---
 
-### Fase 2: Trust, Measurement & Requirements
-**Objetivo:** Produzir Trust & Failure doc, Measurement doc, PRD.
+### Phase 2: Trust, Measurement & Requirements
+**Objective:** Produce Trust & Failure doc, Measurement doc, PRD.
 
 ```
 PROMPT 2.1 — Trust & Failure Framework
-"Desenhe o framework de trust e failure para nossa solução. Preciso de: 
-(1) Confidence tiers com regras claras de classificação, (2) UX para 
-cada tier — o que o rep vê, o que pode/deve fazer, (3) Feedback loop 
-— como o rep reporta erro e como isso melhora o sistema, (4) Como 
-trust se constrói ao longo do tempo — progressive disclosure, accuracy 
-track record visible to user."
+"Design the trust and failure framework for our solution. I need:
+(1) Confidence tiers with clear classification rules, (2) UX for
+each tier — what the rep sees, what they can/should do, (3) Feedback
+loop — how the rep reports an error and how that improves the
+system, (4) How trust builds over time — progressive disclosure,
+accuracy track record visible to the user."
 
 PROMPT 2.2 — Measurement Framework
-"Defina o framework de medição. Preciso de: (1) Outcome metrics que 
-importam para o business (pipeline metrics), (2) AI quality metrics 
-(precision, recall, confidence calibration), (3) Quality bar antes 
-de shipping — thresholds específicos, (4) Como monitorar em produção."
+"Define the measurement framework. I need: (1) Outcome metrics
+that matter for the business (pipeline metrics), (2) AI quality
+metrics (precision, recall, confidence calibration), (3) Quality
+bar before shipping — specific thresholds, (4) How to monitor in
+production."
 
 PROMPT 2.3 — PRD
-"Escreva o PRD para o MVP. User stories, requisitos funcionais e 
-não-funcionais, scope in/out, priorização com justificativa. Foco 
-no que vamos construir no protótipo, com notas sobre o que seria V2."
+"Write the PRD for the MVP. User stories, functional and
+non-functional requirements, scope in/out, prioritization with
+rationale. Focus on what we'll build in the prototype, with notes
+on what would be V2."
 ```
 
 ---
 
-### Fase 3: Eval Spec
-**Objetivo:** Produzir o Eval Spec de 1 página.
+### Phase 3: Eval Spec
+**Objective:** Produce the 1-page Eval Spec.
 
 ```
 PROMPT 3.1 — Eval Spec
-"Construa o eval spec em 1 página. Preciso de: (1) Success criteria 
-quantitativos, (2) Error taxonomy com severity e acceptable rates, 
-(3) Mini test set de 20 exemplos com businesses REAIS que eu possa 
-verificar — input, expected output, ground truth source. O teste 
-precisa ser reproduzível por alguém do time na semana seguinte."
+"Build the eval spec in 1 page. I need: (1) Quantitative success
+criteria, (2) Error taxonomy with severity and acceptable rates,
+(3) Mini test set of 20 examples with REAL businesses I can verify —
+input, expected output, ground truth source. The test needs to be
+reproducible by someone on the team next week."
 ```
 
 ---
 
-### Fase 4: Build the MVP
-**Objetivo:** Construir a solução funcional real.
+### Phase 4: Build the MVP
+**Objective:** Build the real, functional solution.
 
 ```
 PROMPT 4.1 — Architecture & Stack Decision
-"Vamos definir a stack técnica do MVP. Critérios: (1) Preciso iterar 
-ao vivo em 30min durante a sessão, (2) Precisa parecer profissional 
-— não pode parecer hack, (3) AI pipeline real que funcione, (4) Deploy 
-com link público. Proponha a arquitetura e justifique."
+"Let's define the technical stack for the MVP. Criteria: (1) I
+need to iterate live in 30 min during the session, (2) It needs
+to look professional — can't look like a hack, (3) Real AI
+pipeline that works, (4) Deploy with public link. Propose the
+architecture and justify."
 
 PROMPT 4.2 — Build Core Pipeline
-"Construa o pipeline AI de enrichment. [Detalhes baseados na 
-arquitetura definida em 4.1]"
+"Build the AI enrichment pipeline. [Details based on the
+architecture defined in 4.1]"
 
 PROMPT 4.3 — Build Interface
-"Construa a interface do dashboard. [Detalhes baseados no PRD]"
+"Build the dashboard interface. [Details based on the PRD]"
 
 PROMPT 4.4 — Wire Pipeline + Interface
-"Conecte o pipeline à interface. Teste end-to-end."
+"Connect the pipeline to the interface. Test end-to-end."
 
 PROMPT 4.5 — Failure States & Edge Cases
-"Implemente todos os failure states, empty states, loading states, 
-e confidence UI."
+"Implement all failure states, empty states, loading states,
+and confidence UI."
 
 PROMPT 4.6 — Deploy
-"Deploy para [plataforma] com link público."
+"Deploy to [platform] with public link."
 ```
 
 ---
 
-### Fase 5: Polish & Documentation
-**Objetivo:** AI Usage Log, README, empacotamento final.
+### Phase 5: Polish & Documentation
+**Objective:** AI Usage Log, README, final packaging.
 
 ```
 PROMPT 5.1 — AI Usage Log
-"Me ajude a montar o AI Usage Log baseado em todo o nosso histórico 
-de trabalho. Vamos selecionar os momentos mais relevantes."
+"Help me assemble the AI Usage Log based on all of our work
+history. Let's pick the most relevant moments."
 
 PROMPT 5.2 — Final Package
-"Organize tudo no formato final para entrega."
+"Organize everything in the final format for submission."
 ```
 
 ---
 
-## Part IV — Estratégia de Overdelivery por Segmento da Sessão
+## Part IV — Overdelivery Strategy by Session Segment
 
 ### Part 1 — Process Walkthrough (10 min)
 
-| O que esperam | O que vamos entregar |
+| What they expect | What we'll deliver |
 |---|---|
-| Problem framing doc | Problem framing doc + **user research synthesis** com quotes simuladas de SDR interviews |
-| Research | Competitive intelligence detalhada + **benchmark de ferramentas existentes** |
-| PRD breve | PRD completo com **prioritization matrix** |
-| Evidence de LLM | **Narrative de iteração** mostrando evolução do pensamento, não só prompts |
+| Problem framing doc | Problem framing doc + **user research synthesis** with simulated quotes from SDR interviews |
+| Research | Detailed competitive intelligence + **benchmark of existing tools** |
+| Brief PRD | Complete PRD with **prioritization matrix** |
+| Evidence of LLM use | **Iteration narrative** showing evolution of thinking, not just prompts |
 
 ### Part 2 — Demo (15 min)
 
-| O que esperam | O que vamos entregar |
+| What they expect | What we'll deliver |
 |---|---|
-| Protótipo que roda | **MVP deployed** com link público, pipeline AI real |
-| Stubbed outputs | **Mix de dados reais + enrichment AI real** |
-| Core interaction funciona | **Fluxo completo**: list → enrich → detail → feedback |
-| Failure handling | **Confidence tiers visuais** + feedback loop funcional |
+| Prototype that runs | **Deployed MVP** with public link, real AI pipeline |
+| Stubbed outputs | **Mix of real data + real AI enrichment** |
+| Core interaction works | **Full flow**: list → enrich → detail → feedback |
+| Failure handling | **Visual confidence tiers** + functional feedback loop |
 
 ### Part 3 — Live Iteration (30 min)
 
-| O que esperam | O que vamos entregar |
+| What they expect | What we'll deliver |
 |---|---|
-| Consegue mudar coisas ao vivo | **Arquitetura modular** — configs, componentes separados, prompt engineering fácil |
-| Usa AI tools em tempo real | **Workflow praticado** — sabemos exatamente como iterar cada parte |
-| Reage bem a feedback | **Preparar 5-7 cenários de feedback provável** e ter respostas planejadas |
+| Can change things live | **Modular architecture** — configs, separated components, easy prompt engineering |
+| Uses AI tools in real time | **Practiced workflow** — we know exactly how to iterate each part |
+| Reacts well to feedback | **5–7 likely feedback scenarios prepared** with planned responses |
 
 ### Part 4 — Debrief (5 min)
 
-| O que esperam | O que vamos entregar |
+| What they expect | What we'll deliver |
 |---|---|
-| "Próxima versão" verbal | **V2 roadmap escrito** com 3-month vision no doc de solution design |
-| Learnings | Reflexão genuína sobre trade-offs feitos |
+| Verbal "next version" | **Written V2 roadmap** with 3-month vision in the solution design doc |
+| Learnings | Genuine reflection on trade-offs made |
 
 ---
 
-## Part V — Cenários de Feedback Provável na Live Session
+## Part V — Likely Feedback Scenarios in the Live Session
 
-Baseado no prompt e no contexto de Internal Tooling + Sales:
+Based on the prompt and the Internal Tooling + Sales context:
 
-| # | Feedback provável do painel | Preparação |
+| # | Likely panel feedback | Preparation |
 |---|---|---|
-| 1 | "E se o prospect não tem website?" | Ter fallback flow para no-website prospects |
-| 2 | "Como isso se integra no Salesforce?" | Mock de Salesforce integration ou wire diagram pronto |
-| 3 | "Qual é o custo de API por lead enriquecido?" | Ter estimativa de custo por call pronta |
-| 4 | "E se o prospect usa software que não conhecemos?" | "Other/Unknown" detection + learning loop |
-| 5 | "Como batch processing funcionaria?" | Ter pelo menos o design de batch mode |
-| 6 | "E se o confidence score está errado?" | Demo do feedback loop + retrain cycle |
-| 7 | "Isso escala para 10K leads por dia?" | Ter resposta sobre architecture scaling |
+| 1 | "What if the prospect has no website?" | Have a fallback flow for no-website prospects |
+| 2 | "How does this integrate with Salesforce?" | Mocked Salesforce integration or a wire diagram ready |
+| 3 | "What's the API cost per enriched lead?" | Have a per-call cost estimate ready |
+| 4 | "What if the prospect uses software we don't know?" | "Other/Unknown" detection + learning loop |
+| 5 | "How would batch processing work?" | Have at least the design for batch mode |
+| 6 | "What if the confidence score is wrong?" | Demo the feedback loop + retrain cycle |
+| 7 | "Does this scale to 10K leads per day?" | Have an answer on architecture scaling |
 
 ---
 
-## Part VI — Decisões Técnicas Antecipadas
+## Part VI — Anticipated Technical Decisions
 
-### Stack para o MVP (recomendação a validar na Fase 4)
+### MVP stack (recommendation to validate in Phase 4)
 
 ```
-Frontend:  Next.js ou HTML/JS vanilla (o que você iterar melhor ao vivo)
-Backend:   Python FastAPI (pipeline AI + API)
-AI:        OpenAI GPT-4o (inference) + regras determinísticas (tech stack detection)
-Database:  SQLite ou JSON (simplicidade para MVP)
-Deploy:    Vercel (frontend) + Railway/Render (backend)
+Frontend:  Next.js or vanilla HTML/JS (whichever you iterate faster on live)
+Backend:   Python FastAPI (AI pipeline + API)
+AI:        OpenAI GPT-4o (inference) + deterministic rules (tech stack detection)
+Database:  SQLite or JSON (simplicity for MVP)
+Deploy:    Vercel (frontend) + Railway / Render (backend)
 ```
 
-### Por que essa stack:
-1. **Python para AI** — ecossistema mais maduro para LLM
-2. **FastAPI** — rápido de construir, fácil de modificar ao vivo
-3. **Deploy cloud** — link público = profissionalismo
-4. **SQLite/JSON** — zero overhead de infra
+### Why this stack:
+1. **Python for AI** — most mature ecosystem for LLMs
+2. **FastAPI** — fast to build, easy to modify live
+3. **Cloud deploy** — public link = professionalism
+4. **SQLite / JSON** — zero infra overhead
 
 ---
 
-## Próximos Passos
+## Next Steps
 
 > [!IMPORTANT]
-> **A sequência é clara:**
-> 1. Você revisa e aprova este plano
-> 2. Começamos pela **Fase 0: Research** — os prompts 0.1, 0.2, 0.3
-> 3. Cada fase produz um artefato. Cada artefato é entregável.
-> 4. Na Fase 4, construímos o MVP real.
-> 5. Na Fase 5, empacotamos tudo.
+> **The sequence is clear:**
+> 1. You review and approve this plan
+> 2. We start with **Phase 0: Research** — prompts 0.1, 0.2, 0.3
+> 3. Each phase produces an artifact. Each artifact is a deliverable.
+> 4. In Phase 4, we build the real MVP.
+> 5. In Phase 5, we package everything.
 >
-> **Cada interação nossa está sendo documentada e será parte do deliverable "Evidence of LLM Iteration".**
+> **Every interaction of ours is being documented and will be part of the "Evidence of LLM Iteration" deliverable.**
