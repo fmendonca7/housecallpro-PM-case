@@ -164,6 +164,28 @@ Uncertainty is a first-class output, not a failure state. The system has four co
 
 **Unknown is honest.** A business with no detectable signals gets ⚪, never a low-confidence guess. "I don't know" is a trustworthy answer. "Possibly ServiceTitan 20%" is noise that erodes credibility.
 
+### Scoring Formula (Detection Layer → Confidence Score)
+
+The score within each tier is determined by the **combination of detection layers** and the **quantity of independent signals** found. More independent sources = lower false-positive risk = higher score.
+
+| Detection | Evidence | Score | Why |
+|---|---|---|---|
+| **T0 + T1** | GBP booking URL **and** HTML fingerprints, same competitor | **95–100%** | Dual-source confirmation: two completely independent methods agree. Score increases +0.5% per additional T1 fingerprint (cap 100%). |
+| **T0 alone** | Booking URL observed on GBP, site blocked/inaccessible | **92%** | Single source of truth. GBP may have a lag — without T1 corroboration there's a small switch risk. |
+| **T0 + T2 case study** | Booking URL + vendor published the business as a customer | **94%** | Two independent sources; T2 case study corroborates but doesn't add as much as a second deterministic scan. |
+| **T1 alone — 20+ fingerprints** | Deep widget embed: scripts, CSS classes, API calls | **97%** | Volume of independent in-page references makes false positive near-impossible. |
+| **T1 alone — 10+ fingerprints** | Multiple widget references in HTML | **95%** | |
+| **T1 alone — 5+ fingerprints** | Several fingerprints across page | **93%** | |
+| **T1 alone — 3 fingerprints** | Script + class + reference | **90%** | |
+| **T1 alone — 2 fingerprints** | Two independent HTML signals | **87%** | |
+| **T1 alone — 1 fingerprint** | Single widget signal (e.g., browser modal) | **83%** | Single observed T1 signal; enough for 🟢 but lowest confidence within the tier. |
+| **T2 — vendor case study** | Business explicitly named in vendor's published success stories | **82%** | Strong T2: the business consented to be named. But it's external and may be outdated. Still 🟡 Likely. |
+| **T2 — job postings / mentions** | Tool mentioned in hiring posts, reviews, or web text | **35–55%** | Indirect signals; weaker because the business didn't explicitly confirm the tool. |
+| **T3 — AI inference only** | No T0/T1/T2; LLM reasons from vertical, size, region | **30–45%** | 🔴 Possible only. Profile matching without observed signal. Never used to drive outreach. |
+
+> **Note on AI role:** The LLM classifier synthesizes all available evidence and is calibrated to follow this same rubric. It may only use `confirmed` if it was explicitly given a T0 or T1 observation. For T3 inference (no deterministic signals), it outputs `possible` (25–49%). The deterministic scoring block always overrides AI scores when T0/T1/T2 signals exist.
+
+
 ### When the system is wrong
 
 1. **Every prediction shows its evidence** — the SDR sees exactly why the system made its call before acting on it
