@@ -46,7 +46,7 @@
 | 5 | Goettl Air Conditioning | Phoenix, AZ | HVAC | **ServiceTitan** | ServiceTitan published case study + verify via GBP | 🟢 Tier 0/1 |
 | 6 | Atzinger Gardens | OH | Landscaping | **Jobber** | HTML: `getjobber` + `clienthub` refs in page source | 🟢 Tier 1 |
 | 7 | Green Can Cleaner | Denver, CO | Cleaning | **Jobber** | Google indexed: `clienthub.getjobber.com/client_hubs/99e206...` | 🟢 Tier 0/1 |
-| 8 | Kalfas Professional Services | MI | Landscaping | **Jobber** | Jobber featured testimonial + verify website/GBP for `clienthub` link | 🟡 Tier 1/2 |
+| 8 | Best Pro Services — Pikesville MD | Workiz | **Workiz** | 98% | Tier 0 + T1 — Booking URL + HTML widget | ~22s ✅ |
 | 9 | Sure Lock & Key | Multi-state | Locksmith | **Workiz** | Workiz case study + verify GBP for `online-booking.workiz.com` | 🟡 Tier 0/2 |
 | 10 | Danny Key 24/7 | NY area | Locksmith | **Workiz** | Workiz published case study + verify website/GBP | 🟡 Tier 2 |
 | 11 | Noble Locksmith | NY area | Locksmith | **Workiz** | Workiz marketing material + verify website | 🟡 Tier 2 |
