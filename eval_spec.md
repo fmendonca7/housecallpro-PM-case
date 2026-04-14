@@ -8,7 +8,7 @@
 
 The system should not ship if any of the following are true:
 
-- **Confident-Wrong rate > 3%** — the SDR leads with wrong competitive intel in a live call
+- **High-Confidence Wrong rate > 3%** — the SDR leads with wrong competitive intel in a live call
 - **Coverage < 55%** — not enough leads are enriched to justify the workflow change
 - **Any hallucinated evidence** — LLM-generated booking URLs or signals presented as observed facts
 
