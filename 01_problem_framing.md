@@ -90,33 +90,42 @@ If these three numbers move in the right direction, the downstream effects follo
 
 ### 2.2 Definition of Failure
 
-**Failure Type 1: Confident Wrong** ⛔ (WORST)
+Failure in this product isn't just "the system got it wrong." Failure has compounding business costs — eroded rep trust, damaged prospect relationships, and wasted investment in tooling that nobody uses.
+
+**Failure Type 1: Confident Wrong — Trust Destruction** ⛔ (WORST)
 > System says: "🟢 ServiceTitan — 92% confidence"
 > Reality: Prospect uses Jobber.
-> **Consequence:** Rep opens with "I see you're on ServiceTitan..." — prospect is confused, HCP looks sloppy and untrustworthy. Deal is dead before it started.
 >
-> **Threshold:** This must happen <2% of the time for "High Confidence" (🟢) predictions.
+> **What happens in the call:** Rep opens with "I see you're on ServiceTitan..." — prospect is confused, HCP looks sloppy and uninformed. The deal is dead before it started.
+>
+> **What happens after the call:** The rep tells the sales floor "the tool got it wrong on a live call." One story like this travels faster than a hundred correct predictions. Reps stop trusting 🟢 results. Adoption collapses. The entire ROI of the tool — pipeline velocity, personalization lift, CAC reduction — goes to zero because the team doesn't use it anymore.
+>
+> **Business cost:** Not one dead deal — potential loss of the entire tool's value. Trust, once broken on a sales floor, is nearly impossible to rebuild.
+>
+> **Threshold:** < 2% of 🟢 predictions. This is the single metric that gates whether the product ships.
 
-**Failure Type 2: Confident When No Signal** ⚠️
+**Failure Type 2: Misaligned Messaging — Wasted Pipeline Capacity** ⚠️
 > System says: "🟡 Likely FieldEdge — 70% confidence"
 > Reality: Prospect has no FSM software at all.
-> **Consequence:** Rep wastes time on competitive pitch when a "go digital" pitch would work. Less damaging than Type 1, but still wastes effort and misaligns messaging.
 >
-> **Threshold:** <5% of "likely" predictions.
+> **Business cost:** The rep spends the conversation on a competitive displacement pitch ("Why switch from FieldEdge?") when the prospect has never used software. The right play — "go digital" — is never delivered. The lead isn't lost, but the conversion opportunity is wasted. At scale, this is pipeline capacity burned on the wrong message.
+>
+> **Threshold:** < 5% of 🟡 predictions.
 
-**Failure Type 3: Missed Signal** 🔍
+**Failure Type 3: Missed Signal — Suppressed Conversion Lift** 🔍
 > System says: "⚪ Unknown — no signal"
 > Reality: Prospect clearly uses Workiz (booking iframe on their website).
-> **Consequence:** Missed opportunity for personalization. Rep sends generic outreach. Not catastrophic but reduces conversion potential.
 >
-> **Threshold:** <15% miss rate for prospects with detectable signals.
+> **Business cost:** The rep sends generic outreach instead of a targeted competitive pitch. The 2-3x conversion lift from personalization never materializes for this lead. Not catastrophic individually, but at a 15%+ miss rate this erodes the aggregate conversion improvement that justifies the product's existence.
+>
+> **Threshold:** < 15% miss rate for prospects with detectable signals.
 
-**Failure Type 4: System Unusable**
-> Enrichment takes 5+ minutes per lead.
-> UI is confusing. Results are hard to interpret.
-> **Consequence:** Reps ignore the tool and go back to manual research.
+**Failure Type 4: Tool Abandonment — Zero ROI** 🚫
+> Enrichment takes 5+ minutes per lead. UI is confusing. Results are hard to interpret.
 >
-> **Threshold:** Enrichment < 30 seconds per lead. UI clarity score > 4/5 in user testing.
+> **Business cost:** Reps ignore the tool and revert to manual research. The investment in building, deploying, and maintaining the system produces zero return. Worse — it creates organizational skepticism toward future internal tools. "Remember that competitor detection thing? Nobody used it."
+>
+> **Threshold:** Enrichment < 30 seconds per lead. Weekly active usage ≥ 70% of SDR team within 30 days of launch.
 
 ---
 
@@ -329,14 +338,6 @@ When a rep marks a prediction as wrong:
 ### Primary User: SDR/BDR (Outbound)
 
 > **"When I'm preparing outreach for a prospect, I need to know what tools they currently use so I can customize my pitch, prioritize my time on high-fit prospects, and accelerate the path to a conversation."**
-
-### Secondary User: RevOps / Growth Team
-
-> **"When I'm building lead scoring models and territory plans, I need aggregated competitive intelligence to understand market share by region and vertical, so I can allocate reps to the highest-opportunity segments."**
-
-### Tertiary User: Sales Leadership
-
-> **"When I'm evaluating team performance and market strategy, I need to understand our win/loss rates by competitor, so I can invest in the right competitive positioning and enablement."**
 
 ---
 
