@@ -14,16 +14,20 @@ HCP's customer acquisition cost (CAC) is inflated by a sales motion that burns r
 2. **Conversion is suppressed.** Outreach is overwhelmingly generic — less than 10% of cold emails reference the prospect's competitive context. Personalized outreach (mentioning the competitor by name, citing a specific switching advantage) converts 2-3x higher, but reps simply don't have the data to personalize.
 3. **High-fit leads are invisible.** Without knowing what software a prospect runs, reps can't prioritize. A ServiceTitan user at $250+/tech/month is a fundamentally different opportunity than a greenfield business on paper — but both look identical in a CRM lead list.
 
-The root cause across all three: **reps cannot reliably determine which competitor FSM software a prospect currently uses.** The workflow that produces this gap:
+### 1.2 The User Problem
+
+The root cause across all three business impacts: **reps cannot reliably determine which competitor FSM software a prospect currently uses.**
+
+On the sales floor, this plays out every morning. A rep opens their CRM, pulls a list of 50 prospects, and starts the same manual loop for each one:
 
 1. Google the business name → visit website (if one exists)
 2. Check Google Business Profile, Yelp, and review sites
 3. Try to infer what tools the prospect uses
 4. Craft outreach — usually generic, because step 3 almost always fails
 
-At scale (hundreds of prospects/week), this is a structural drag on growth — not a workflow inconvenience.
+**15-20 minutes per lead, repeated 25+ times a day.** By the time reps start making calls, half the day is gone — and they still don't know what software the prospect uses. At scale (hundreds of prospects/week), this is a structural drag on growth, not a workflow inconvenience.
 
-### 1.2 The Specific Pain Point We're Targeting
+### 1.3 The Specific Pain Point We're Targeting
 
 > **"Sales reps lack structured intelligence about which competitor FSM software a prospect is running — so they can't personalize outreach, can't prioritize high-fit leads, and waste time on prospects who aren't a match."**
 
@@ -37,7 +41,7 @@ This is the **highest-leverage** pain point because:
 | **Data already exists** | Our POC proved: competitor signals are publicly available (GBP links, HTML widgets, job postings) — they just aren't being captured |
 | **No existing solution** | No tool in the market specifically detects FSM software usage for home service SMBs |
 
-### 1.3 Why NOT Other Pain Points?
+### 1.4 Why NOT Other Pain Points?
 
 | Alternative Pain Point | Why It's Lower Leverage |
 |---|---|
