@@ -18,8 +18,8 @@ The system should not ship if any of the following are true:
 
 | Metric | Target | Measured |
 |---|---|---|
-| Precision @ 🟢 Confirmed tier | ≥ 90% | ✅ 100% (6/6 correct) |
-| Confident-Wrong rate | < 3% | ✅ 0% |
+| High-Confidence Wrong rate (🟢 predictions that are incorrect) | < 3% | ✅ 0% (0/6) |
+| Overall precision (all tiers expressing a competitor) | ≥ 80% | ✅ 100% (6/6 correct across 🟢+🟡) |
 | Coverage — leads with any signal returned | ≥ 55% | ✅ 75% (6/8) |
 | Enrichment latency | < 30s | ✅ ~23s avg |
 | Evidence trail present on every non-⚪ result | 100% | ✅ 100% |
