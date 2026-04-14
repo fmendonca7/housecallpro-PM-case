@@ -6,17 +6,22 @@
 
 ## 1. Problem Statement
 
-### 1.1 What's Happening Today
+### 1.1 The Business Problem
 
-HCP's sales and growth teams manually research prospective home service businesses before outreach. For each prospect, a rep:
+HCP's customer acquisition cost (CAC) is inflated by a sales motion that burns rep capacity on research instead of selling. Three dynamics compound to create a growth ceiling:
 
-1. Googles the business name
-2. Visits their website (if one exists)
-3. Checks Google Business Profile, Yelp, and review sites
-4. Tries to infer what tools the prospect uses
-5. Crafts outreach — usually generic, because step 4 almost always fails
+1. **Pipeline velocity is throttled.** Reps contact 15-25 leads/day — industry benchmark for tool-assisted teams is 60-100+. The gap is not effort; it's that reps spend 15-20 minutes per lead on manual research before picking up the phone.
+2. **Conversion is suppressed.** Outreach is overwhelmingly generic — less than 10% of cold emails reference the prospect's competitive context. Personalized outreach (mentioning the competitor by name, citing a specific switching advantage) converts 2-3x higher, but reps simply don't have the data to personalize.
+3. **High-fit leads are invisible.** Without knowing what software a prospect runs, reps can't prioritize. A ServiceTitan user at $250+/tech/month is a fundamentally different opportunity than a greenfield business on paper — but both look identical in a CRM lead list.
 
-**This process takes 15-20 minutes per lead.** At scale (hundreds of prospects/week), reps spend more time researching than selling. The biggest gap: **reps cannot reliably determine which competitor software a prospect currently uses**, so outreach is one-size-fits-all.
+The root cause across all three: **reps cannot reliably determine which competitor FSM software a prospect currently uses.** The workflow that produces this gap:
+
+1. Google the business name → visit website (if one exists)
+2. Check Google Business Profile, Yelp, and review sites
+3. Try to infer what tools the prospect uses
+4. Craft outreach — usually generic, because step 3 almost always fails
+
+At scale (hundreds of prospects/week), this is a structural drag on growth — not a workflow inconvenience.
 
 ### 1.2 The Specific Pain Point We're Targeting
 
@@ -45,31 +50,43 @@ This is the **highest-leverage** pain point because:
 
 ## 2. What "Good" Looks Like vs. What "Failure" Looks Like
 
-### 2.1 Definition of Good — Concrete Scenarios
+### 2.1 Definition of Good
 
-**Scenario A: High-Confidence Detection (ServiceTitan user)**
+**"Good" at the business level** means three measurable shifts:
+
+| Outcome | Before | After | Why It Matters |
+|---|---|---|---|
+| **Leads contacted per rep per day** | 15-25 | 50+ | Pipeline velocity directly drives top-of-funnel volume |
+| **Outreach personalization rate** | ~10% mention competitor | 60%+ | Personalized cold outreach converts 2-3x higher |
+| **Rep research time per lead** | 15-20 min | < 2 min | Time returned to selling = more conversations = more pipeline |
+
+If these three numbers move in the right direction, the downstream effects follow: higher reply rates, more meetings booked, shorter sales cycles, and lower CAC.
+
+**What this looks like in practice — three scenarios:**
+
+**Scenario A: High-value competitive conversion (ServiceTitan user)**
 > Rep opens lead "Plumbline Services, Denver" in the enrichment dashboard.
 > System shows: **🟢 ServiceTitan (Scheduling Pro) — 95% confidence**
 > Evidence: "GBP booking link: book.servicetitan.com/am8bmapr"
 > Suggested pitch: "You're paying $250+/tech/month. HCP delivers 80% of the value at a fraction of the cost, with zero implementation fee."
 >
-> **Result:** Rep sends personalized cold email mentioning ServiceTitan directly. Prospect replies: "How did you know? We've been frustrated with the costs." Meeting booked.
+> **Business impact:** Rep sends personalized cold email mentioning ServiceTitan directly. Prospect replies: "How did you know? We've been frustrated with the costs." Meeting booked. Without competitive intelligence, this email would have been generic — and ignored.
 
-**Scenario B: Medium-Confidence Detection (likely Jobber)**
+**Scenario B: Research time eliminated (likely Jobber)**
 > Rep opens lead "Green Can Cleaners, Boulder."
 > System shows: **🟡 Likely Jobber — 68% confidence**
 > Evidence: "Client Hub booking page found via Google index"
 > Note: "Verify before outreach — medium confidence"
 >
-> **Result:** Rep opens the client hub link to quickly confirm, then tailors pitch. Saves 15 min of manual research.
+> **Business impact:** Rep opens the evidence link, confirms in 30 seconds, tailors pitch. What used to take 15 minutes of manual research now takes under a minute. Multiplied across 50 leads/day, that's 12+ hours of selling capacity returned per rep per week.
 
-**Scenario C: No Signal — Greenfield (no FSM detected)**
+**Scenario C: Greenfield identification (no FSM detected)**
 > Rep opens lead "Joe's Electrical, Colorado Springs."
 > System shows: **⚪ No FSM software detected — likely manual/paper-based**
 > Evidence: "No website, 7 Google reviews, established 2023. No booking links. No job postings."
 > Suggested pitch: "Still running on paper? HCP is the easiest way to go digital."
 >
-> **Result:** Rep uses the "digital transformation" talk track. Even the absence of signals is actionable intelligence.
+> **Business impact:** Even the absence of signals is actionable intelligence. The rep uses the "digital transformation" talk track instead of a competitive angle. This is a different type of lead — and now reps can segment and prioritize accordingly.
 
 ### 2.2 Definition of Failure
 
