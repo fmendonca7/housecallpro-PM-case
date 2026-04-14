@@ -25,7 +25,7 @@ On the sales floor, this plays out every morning. A rep opens their CRM, pulls a
 3. Try to infer what tools the prospect uses
 4. Craft outreach — usually generic, because step 3 almost always fails
 
-**15-20 minutes per lead, repeated 25+ times a day.** By the time reps start making calls, half the day is gone — and they still don't know what software the prospect uses. At scale (hundreds of prospects/week), this is a structural drag on growth, not a workflow inconvenience.
+**15-20 minutes per lead, repeated 25+ times a day.** By the time reps start making calls, the day is gone — and they still don't know what software the prospect uses. At scale (hundreds of prospects/week), this is a structural drag on growth, not a workflow inconvenience.
 
 ### 1.3 The Specific Pain Point We're Targeting
 
